@@ -1,9 +1,8 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  root: true,
-  extends: ["@repo/eslint-config/next.js"],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    project: true,
-  },
+    root: true,
+    parserOptions: {
+        project: './tsconfig.eslint.json',
+    },
+    extends: [require.resolve('@pangshu/code/eslint/next')],
 };
